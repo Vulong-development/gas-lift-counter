@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+	<title>Gas lift calculator</title>
+    <link rel="stylesheet" href="css\style.css">
+  </head>
+  <body>
+    
+	<main class="main">
+	<div class="container">
+	  <section class="main-section">
+        
+		
+		  
+		  <input class="form-input__field" id="width" type="number" placeholder="Ширина фасада">
+
+      <input class="form-input__field" id="height" type="number" placeholder="Высота фасада">
+		    
+		<label for="material">Тип материала:</label>
+		<select id="material" >
+		  <option value="0.00000069">ДСП</option>
+		  <option value="0.00000075">МДФ</option>
+		</select>
+
+		<label for="thickness">Толщина материала:</label>
+		<select id="thickness">
+		  <option value="16">16</option>
+		  <option value="18">18</option>
+		  <option value="19">19</option>
+		</select>
+
+		<div class="degree">
+		  <label>Угол открывания:</label>
+          <input type="radio" name="degrees" value="100">75&deg
+		  <input type="radio" name="degrees" value="90" >90&deg
+		  <input type="radio" name="degrees" value="80" checked>100&deg
+		</div>
+		<div class="quantity">
+		  <label>Количество кронштейнов:</label>
+		  <input type="radio" name="quantity" value="1" data-quantity="Один кронштейн ">1
+		  <input type="radio" name="quantity" value="2" data-quantity="Два кронштейна "checked>2
+		</div>
+
+		<div class="output">
+		  <label for="door-weight">Масса фасада кг:</label>
+		  <output id="door-weight">0</output>
+		  <label for="lift-type">Необходимо:</label>
+		  <output id="lift-type">-</output>
+		</div>
+	  </section>
+	</div>
+	<div class="container">
+	  <div class="keyboard">
+	    <button class="button count" type="button">Считать</button>
+		<button class="button clear" type="button">Очистить</button>
+	  </div>
+	</div>
+
+	</main>
+
+  <script src="js/gaslift-counter.js"></script>
+  <script src="js/script.js"></script>
+  </body>
+</html>
